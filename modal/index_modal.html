@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+<body>
+
+    <div class="container">
+        <button type="submit" class = "btn" onclick="openPopup()">
+        Click here
+        </button>
+        <div class="popup" id="popup">
+            <h3>Enter Login Details:</h3>
+            <input type="text" placeholder="Username" size="40">
+            <input type="password" placeholder="Password" size="40" id="myPassword">
+            <input type="checkbox" onclick="Show_passwrd()"> Show Password
+            <button type ="button" onclick="closePopup()">Login</button>
+
+    </div>
+    </div>
+
+    <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup(){
+            popup.classList.add("open_popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open_popup");
+        }
+        function Show_passwrd() {
+            var x = document.getElementById("myPassword");
+            if (x.type === "password") {
+            x.type = "text";
+            } else {
+            x.type = "password";
+            }
+}
+    </script>
+
+    
+</body>
+</html>
